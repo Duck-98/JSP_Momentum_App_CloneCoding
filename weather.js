@@ -3,7 +3,7 @@ const COORDS = 'coords';
 
 function getWeather(){
  fetch(
-     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`);
 }
 function saveCoords(coordsObj){
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
@@ -30,7 +30,7 @@ function loadCoords(){
     if(loadedCords === null){
         askForCoords();
     } else{
-        const parsedCoords = JSON.parse(loadCoords);
+        const parsedCoords = JSON.parse(loadedCoords);
         console.log(parsedCoords);
         getWeather(parsedCoords.latitude, parseCoords.longitude);
         //getweather
