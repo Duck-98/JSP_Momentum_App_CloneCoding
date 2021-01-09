@@ -32,7 +32,7 @@ function loadCoords(){
     } else{
         const parsedCoords = JSON.parse(loadedCoords);
         console.log(parsedCoords);
-        getWeather(parsedCoords.latitude, parseCoords.longitude);
+        getWeather(parsedCoords.latitude, parsedCoords.longitude);
         //getweather
     }
 }
