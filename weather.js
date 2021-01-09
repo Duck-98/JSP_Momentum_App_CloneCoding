@@ -26,8 +26,8 @@ function askForCoords(){
     navigator.geolocation.getCurrentPosition(handleGeoSucces, handleGeoError);
 }
 function loadCoords(){
-    const loadedCords = localStorage.getItem(COORDS);
-    if(loadedCords === null){
+    const loadedCoords = localStorage.getItem(COORDS);
+    if(loadedCoords === null){
         askForCoords();
     } else{
         const parsedCoords = JSON.parse(loadedCoords);
