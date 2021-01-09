@@ -29,6 +29,9 @@ function loadCoords(){
     if(loadedCords === null){
         askForCoords();
     } else{
+        const parseCoords = JSON.parse(loadCoords);
+        console.log(parseCoords);
+        getWeather(parseCoords.latitude, parseCoords.longitude);
         //getweather
     }
 }
