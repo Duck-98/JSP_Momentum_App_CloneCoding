@@ -2,7 +2,7 @@ const API_KEY = "9b1d08ca7a1d10ff6d116cbf54a68f6e";
 const COORDS = 'coords';
 
 function saveCoords(coordsObj){
-    localStorage.setItem(COORDS, JSON.stringify(coords));
+    localStorage.setItem(COORDS, JSON.stringify(coordsObj));
 
 }
 function handleGeoSucces(position){
