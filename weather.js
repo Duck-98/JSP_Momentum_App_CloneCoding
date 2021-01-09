@@ -5,7 +5,7 @@ const COORDS = "coords";
 // 여기서 fetch 함수는 requests 함수와 같은 역할.
 function getWeather(lat, lng){
     fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&APPID=${API_KEY}&units=metric`
         ).then(function(response){
             return response.json();
         }).then(function(json){
